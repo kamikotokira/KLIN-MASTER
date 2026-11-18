@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Калькулятор уборки — Клин-мастер</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/cleaning.css">
+  <link rel="stylesheet" href="assets/vendor/animate.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/logo.png" alt="">
+        <span class="brand-text">Клин-мастер</span>
+      </a>
+      <nav class="main-nav" aria-label="Разделы">
+        <a href="index.html#services">Услуги</a>
+        <a href="index.html#process">Как работаем</a>
+        <a class="is-active" href="calculator.html">Калькулятор</a>
+      </nav>
+      <a class="phone" href="tel:+78565551234">+7 (856) 555-12-34</a>
+    </div>
+  </header>
+
+  <main class="calculator-page">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a>
+        <span>/</span>
+        <span>Калькулятор</span>
+      </nav>
+
+      <div class="calculator-head" data-animate="fadeInUp">
+        <h1>Калькулятор уборки</h1>
+        <p>Выберите услугу и площадь. Дополнительные работы можно отметить отдельно, стоимость обновится сразу.</p>
+      </div>
+
+      <div class="calculator-layout">
+        <form class="order-form" id="orderForm" data-animate="fadeInUp">
+          <fieldset>
+            <legend>Параметры уборки</legend>
+            <label class="field">
+              <span>Тип уборки</span>
+              <select id="orderType">
+                <option value="maintenance">Поддерживающая</option>
+                <option value="general">Генеральная</option>
+                <option value="repair">После ремонта</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Площадь, м²</span>
+              <input id="orderArea" type="number" min="10" max="500" value="45" required>
+            </label>
+            <fieldset class="extras">
+              <legend>Дополнительно</legend>
+              <label><input type="checkbox" class="extra" value="windows"> Мытьё окон</label>
+              <label><input type="checkbox" class="extra" value="oven"> Духовка</label>
+              <label><input type="checkbox" class="extra" value="fridge"> Холодильник</label>
+              <label><input type="checkbox" class="extra" value="balcony"> Балкон</label>
+            </fieldset>
+          </fieldset>
+
+          <fieldset>
+            <legend>Когда и кому</legend>
+            <label class="field">
+              <span>Дата уборки</span>
+              <input id="orderDate" type="date" required>
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>Имя</span>
+                <input id="orderName" type="text" placeholder="Как к вам обращаться" required>
+              </label>
+              <label class="field">
+                <span>Телефон</span>
+                <input id="orderPhone" type="tel" placeholder="+7 (___) ___-__-__" required>
+              </label>
+            </div>
+          </fieldset>
+
+          <button class="button" type="submit">Оформить заявку</button>
+          <p class="form-message" id="formMessage" role="status"></p>
+        </form>
+
+        <aside class="order-summary" aria-live="polite" data-animate="fadeIn" data-delay="150">
+          <h2>Ваш расчёт</h2>
+          <dl class="summary-list" id="summaryList"></dl>
+          <div class="summary-total">
+            <span>Итого</span>
+            <strong id="totalPrice">6 750 ₽</strong>
+          </div>
+          <div class="summary-time">
+            <span>Ориентировочно</span>
+            <strong id="totalTime">2 часа</strong>
+          </div>
+          <p class="summary-note">Цена ориентировочная. Перед началом работ её подтверждает менеджер.</p>
+        </aside>
+      </div>
+
+      <section class="prep-block" data-animate="fadeInUp">
+        <h2>Подготовка к уборке</h2>
+        <ul>
+          <li>уберите личные вещи и документы с открытых поверхностей;</li>
+          <li>освободите проходы к окнам, мебели и технике;</li>
+          <li>обеспечьте доступ к воде и электричеству;</li>
+          <li>предупредите о животных и хрупких предметах.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>Клин-мастер, 2026</span>
+      <span>Команда: Блажко Никита, Кирадиев Даниил, Комашко Даниил</span>
+      <a href="index.html">Вернуться на главную</a>
+    </div>
+  </footer>
+
+  <script src="js/services.js"></script>
+  <script src="js/cleaning.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

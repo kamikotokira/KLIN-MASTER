@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Клин-мастер — уборка квартир и офисов</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/cleaning.css">
+  <link rel="stylesheet" href="assets/vendor/animate.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/logo.png" alt="">
+        <span class="brand-text">Клин-мастер</span>
+      </a>
+      <nav class="main-nav" aria-label="Разделы">
+        <a href="#services">Услуги</a>
+        <a href="#process">Как работаем</a>
+        <a href="calculator.html">Калькулятор</a>
+      </nav>
+      <a class="phone" href="tel:+78565551234">+7 (856) 555-12-34</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Чистота без лишних хлопот</h1>
+          <p>Поддерживающая и генеральная уборка, уборка после ремонта. Приезжаем со своими средствами и инвентарём, работаем по договорённости.</p>
+          <ul class="hero-points">
+            <li>расчёт стоимости до выезда;</li>
+            <li>работа в будни и выходные;</li>
+            <li>уборка квартир, домов и офисов.</li>
+          </ul>
+        </div>
+        <div class="quick-card">
+          <h2>Быстрый расчёт</h2>
+          <form id="quickForm">
+            <label class="field">
+              <span>Тип уборки</span>
+              <select id="quickType">
+                <option value="maintenance">Поддерживающая</option>
+                <option value="general">Генеральная</option>
+                <option value="repair">После ремонта</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Площадь, м²</span>
+              <input id="quickArea" type="number" min="10" max="500" value="45" required>
+            </label>
+            <p class="quick-result" id="quickResult">Примерная стоимость: 6 750 ₽</p>
+            <p class="quick-time" id="quickTime">Ориентировочно 2 часа</p>
+            <button class="button" type="submit">Показать расчёт</button>
+            <a class="text-link" href="calculator.html">Подробный калькулятор</a>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head" data-animate="fadeInUp">
+          <h2>Что можно заказать</h2>
+        </div>
+        <div class="services-table" data-animate="fadeInUp" data-delay="100">
+          <div class="service-row service-head">
+            <span>Услуга</span>
+            <span>Что входит</span>
+            <span>Цена</span>
+          </div>
+          <div class="service-row">
+            <div><strong>Поддерживающая</strong><small>для регулярной уборки</small></div>
+            <p>Полы, пыль, кухня, санузел, вынос мусора.</p>
+            <div class="service-price"><strong>от 2 800 ₽</strong><small>150 ₽/м²</small></div>
+          </div>
+          <div class="service-row">
+            <div><strong>Генеральная</strong><small>раз в сезон или после переезда</small></div>
+            <p>Все поверхности, техника, двери, окна, труднодоступные места.</p>
+            <div class="service-price"><strong>от 5 000 ₽</strong><small>250 ₽/м²</small></div>
+          </div>
+          <div class="service-row">
+            <div><strong>После ремонта</strong><small>строительная пыль и следы работ</small></div>
+            <p>Пыль со стен и мебели, следы краски, клея и затирки.</p>
+            <div class="service-price"><strong>от 6 500 ₽</strong><small>320 ₽/м²</small></div>
+          </div>
+        </div>
+        <p class="price-note">Итоговая цена зависит от площади и дополнительных работ. Точную сумму покажет калькулятор.</p>
+      </div>
+    </section>
+
+    <section class="section photo-section">
+      <div class="container" data-animate="fadeInUp">
+        <div class="section-head">
+          <h2>Как проходит уборка</h2>
+        </div>
+        <div class="photo-grid">
+          <figure class="photo-card">
+            <img src="assets/photos/cleaning-room.jpg" alt="Клинер пылесосит ковёр в гостиной" width="1200" height="800" loading="lazy">
+            <figcaption>Уборка гостиной</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="assets/photos/cleaning-hands.jpg" alt="Клинер протирает деревянный стол" width="1000" height="1500" loading="lazy">
+            <figcaption>Протирание поверхностей</figcaption>
+          </figure>
+        </div>
+        <p class="photo-credit">Фотографии: <a href="https://www.pexels.com/photo/3867613/" target="_blank" rel="noopener">Gustavo Fring</a>, <a href="https://www.pexels.com/photo/9462164/" target="_blank" rel="noopener">Liliana Drew</a>. Pexels.</p>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="process">
+      <div class="container process-grid" data-animate="fadeInUp">
+        <div>
+          <h2>От заявки до результата</h2>
+          <ol class="steps">
+            <li><span>1</span><div><strong>Расчёт</strong><p>Выбираете услугу и площадь, получаете ориентировочную стоимость.</p></div></li>
+            <li><span>2</span><div><strong>Согласование</strong><p>Уточняем адрес, время и дополнительные пожелания.</p></div></li>
+            <li><span>3</span><div><strong>Уборка</strong><p>Клинер приезжает со средствами и инвентарём.</p></div></li>
+            <li><span>4</span><div><strong>Приёмка</strong><p>Проверяете результат и оплачиваете согласованную сумму.</p></div></li>
+          </ol>
+        </div>
+        <aside class="included">
+          <h2>Что входит в уборку</h2>
+          <ul>
+            <li>сухая и влажная уборка полов;</li>
+            <li>удаление пыли с открытых поверхностей;</li>
+            <li>кухня и санузел;</li>
+            <li>вынос мусора;</li>
+            <li>средства и инвентарь клинера.</li>
+          </ul>
+          <a class="button button-light" href="calculator.html">Рассчитать стоимость</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-band" data-animate="fadeInUp">
+        <div>
+          <h2>Обсудим вашу уборку</h2>
+          <p>Позвоните или оставьте заявку в калькуляторе. Подскажем, какая уборка подойдёт, и согласуем время.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="phone phone-large" href="tel:+78565551234">+7 (856) 555-12-34</a>
+          <span>Донецк, ул. Артёма, 50</span>
+          <span>Ежедневно с 8:00 до 20:00</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>Клин-мастер, 2026</span>
+      <span>Команда: Блажко Никита, Кирадиев Даниил, Комашко Даниил</span>
+    </div>
+  </footer>
+
+  <script src="js/services.js"></script>
+  <script src="js/cleaning.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
